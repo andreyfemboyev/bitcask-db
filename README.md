@@ -1,4 +1,21 @@
-# Bitcask на Python
+# Bitcask DB
+
+**An embedded persistent key-value engine written in Python 3.12 using only the standard library.** Designed for local Linux filesystems; includes append-only segments, CRC32 checks, recovery and compaction.
+
+[RaftDB Extended](https://github.com/andreyfemboyev/raftfb_extended) adapts ideas from this storage design. [Project portfolio](https://github.com/andreyfemboyev/portfolio).
+
+| Tool | Best suited to |
+| --- | --- |
+| Python dict | In-memory key-value access without built-in persistence |
+| Bitcask DB | Studying durable append-only key-value storage |
+| SQLite | Embedded relational queries and transactions |
+
+```mermaid
+flowchart LR
+    A[21-byte header] --> B[Key bytes] --> C[Value bytes]
+```
+
+## Документация на русском
 
 Встраиваемая дисковая база «ключ–значение». Реализация использует стандартную библиотеку Python 3.12 и рассчитана на Linux с локальной файловой системой.
 
